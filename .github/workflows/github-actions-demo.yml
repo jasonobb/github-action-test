@@ -1,11 +1,11 @@
 name: GitHub Actions Demo
-run-name: ${{ secrets.TEST_NAME }} is testing out GitHub Actions 🚀
+run-name: ${{ secrets.MY_SECRET_NAME }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is the use of a secret , it is suppose to print my name ${{secrets.TEST_NAME}}"
+      - run: echo "This is the use of a secret , it is suppose to print my name ${{secrets.MY_SECRET_NAME}}"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
